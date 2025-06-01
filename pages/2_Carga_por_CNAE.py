@@ -25,7 +25,7 @@ Use os filtros na barra lateral para:
 # 1) Caminho para o arquivo Excel de Natureza Jurídica
 # --------------------------------------------------
 
-EXCEL_CNAE = r"G:\Meu Drive\Portifolio\dashboard_tributaria\base_de_dados\arrecadacao_CNAE_2016_2024.xlsx"
+EXCEL_CNAE = r"base_de_dados\arrecadacao_CNAE_2016_2024.xlsx"
 if not os.path.isfile(EXCEL_CNAE):
     st.error(f"Arquivo não encontrado em:\n  {EXCEL_CNAE}\nVerifique se está no local correto.")
     st.stop()

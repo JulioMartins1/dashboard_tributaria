@@ -35,14 +35,18 @@ Use os filtros na barra lateral para escolher:
 # 2) Conexão com o banco SQLite (caminho absoluto)
 # --------------------------------------------------
 
-DB_PATH = r"G:\Meu Drive\Portifolio\dashboard_tributaria\base_de_dados\tributos.db"
+# determina a pasta “base_de_dados” relativa à raiz do projeto
+DB_PATH = os.path.join("base_de_dados", "tributos.db")
+
+# Verifica se esse arquivo existe. Se não existir, exibe erro:
 if not os.path.isfile(DB_PATH):
     st.error(
         f"O arquivo de banco de dados não foi encontrado em:\n  {DB_PATH}\n\n"
-        "Certifique-se de executar o ETL para criar/popular o SQLite antes de rodar este app."
+        "Certifique-se de executar o ETL localmente e de ter adicionado 'tributos.db' à pasta 'base_de_dados/'."
     )
     st.stop()
 
+# Cria o engine usando o caminho relativo
 engine = create_engine(f"sqlite:///{DB_PATH}", echo=False)
 inspector = inspect(engine)
 
