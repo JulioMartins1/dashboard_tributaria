@@ -1,7 +1,7 @@
 # Dashboard Tributária
 
 Este repositório contém a versão 1.0 de um **Dashboard Tributária** em Streamlit, que permite explorar a evolução, distribuição e crescimento da arrecadação de tributos federais no Brasil por estado (UF) e por natureza jurídica, usando dados públicos (2000–2024).
-
+https://dashtributosbr.streamlit.app
 ---
 
 ## Estrutura do Repositório
